@@ -14,7 +14,7 @@ body {
   padding: 0;
   background-color: var(--primary-bg-color);
   color: var(--primary-text-color);
-  background-image: url("../image/cover2.png"); 
+  background-image: url("image/cover2.png"); 
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;

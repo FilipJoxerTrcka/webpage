@@ -63,7 +63,7 @@ h2 strong {
 
 /* Mobile Controls Styling */
 #mobileControls {
-  display: flex;
+  display: none; /* Initially hidden */
   flex-direction: column;
   align-items: center;
   margin-top: 0px;
@@ -90,4 +90,3 @@ h2 strong {
   display: flex;
   justify-content: center;
 }
-

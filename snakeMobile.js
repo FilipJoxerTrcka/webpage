@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let foodPosY = 0;
     let gameIsRunning = false;
     let gameStarted = false; 
-    let fps = 7;
+    let fps = 5;
     let score = 0;
 
     // Start game on canvas click

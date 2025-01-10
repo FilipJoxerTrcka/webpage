@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (window.innerWidth >= 769) { // PC screen
                 gameContainer.innerHTML = '<iframe src="racingCar/racingCar.html" frameborder="0" style="width:100%; height:100%;"></iframe>';
             } else { // Mobile screen
-                gameContainer.innerHTML = '<iframe src="racingCar/racingMobile.html" frameborder="0" style="width:100%; height:100%;"></iframe>';
+                gameContainer.innerHTML = '<iframe src="racingCar/racingCarMobile.html" frameborder="0" style="width:100%; height:100%;"></iframe>';
             }
         }
     }

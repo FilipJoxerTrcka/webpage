@@ -1,172 +1,173 @@
-/* Root Variables */
+/* Root Variables for consistent theming */
 :root {
-  --primary-bg-color: #000;
-  --primary-text-color: #fff;
-  --secondary-text-color: rgba(255, 255, 255, 0.7);
-  --hover-bg-color: rgba(255, 255, 255, 0.1);
-  --section-spacing: 75vh; /* Adjusted to use viewport height */
+  --primary-bg-color: #000; /* Primary background color */
+  --primary-text-color: #fff; /* Primary text color */
+  --secondary-text-color: rgba(255, 255, 255, 0.7); /* Secondary text color for hover effects */
+  --hover-bg-color: rgba(255, 255, 255, 0.1); /* Background color for hover effects */
+  --section-spacing: 75vh; /* Vertical spacing between sections using viewport height */
 }
 
 /* General Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif; /* Set default font */
   margin: 0;
   padding: 0;
-  background-color: var(--primary-bg-color);
-  color: var(--primary-text-color);
-  background-image: url("image/cover2.png"); /* Update with the actual URL */
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-color: var(--primary-bg-color); /* Use primary background color */
+  color: var(--primary-text-color); /* Use primary text color */
+  background-image: url("image/cover2.png"); /* Background image */
+  background-attachment: fixed; /* Fix background image position */
+  background-size: cover; /* Cover entire background */
+  background-repeat: no-repeat; /* Prevent background repetition */
 }
 
 h2 {
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-  cursor: pointer; /* Indicate that the title is clickable */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Add shadow to headings */
+  cursor: pointer; /* Indicate headings are clickable */
 }
 
 a {
-  color: var(--primary-text-color);
-  text-decoration: none;
-  position: relative;
+  color: var(--primary-text-color); /* Link color */
+  text-decoration: none; /* Remove underline from links */
+  position: relative; /* Position for pseudo-element */
 }
 
 a::after {
-  content: '';
+  content: ''; /* Decorative line under links */
   position: absolute;
   width: 100%;
   height: 2px;
   background-color: var(--primary-text-color);
   left: 0;
   bottom: -2px;
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
+  transform: scaleX(0); /* Initially hidden */
+  transition: transform 0.3s ease; /* Smooth transition */
 }
 
 a:hover::after {
-  transform: scaleX(1);
+  transform: scaleX(1); /* Show line on hover */
 }
 
 a:hover {
-  color: var(--secondary-text-color);
+  color: var(--secondary-text-color); /* Change text color on hover */
 }
 
 /* Navigation */
 nav {
-  position: fixed;
+  position: fixed; /* Fix navigation at the top */
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(10px);
-  z-index: 1000;
-  transition: background-color 0.3s;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Blur effect */
+  z-index: 1000; /* Ensure it stays on top */
+  transition: background-color 0.3s; /* Smooth background transition */
 }
 
 nav:hover {
-  background-color: rgba(0, 0, 0, 1);
+  background-color: rgba(0, 0, 0, 1); /* Darken background on hover */
 }
 
 nav ul {
   display: flex;
-  flex-direction: column;
-  list-style: none;
+  flex-direction: column; /* Stack items vertically */
+  list-style: none; /* Remove list bullets */
   padding: 10px;
   margin: 0;
 }
 
 nav li {
-  margin: 10px 0;
+  margin: 10px 0; /* Space between items */
 }
 
 /* Desktop Navigation */
 @media screen and (min-width: 769px) {
   nav ul {
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: row; /* Arrange items horizontally */
+    justify-content: center; /* Center items */
   }
 
   nav li {
-    margin: 0 15px;
+    margin: 0 15px; /* Horizontal spacing */
   }
 }
 
 /* Container */
 .container {
   display: flex;
-  flex-direction: column;
-  padding-top: 70px;
+  flex-direction: column; /* Stack sections vertically */
+  padding-top: 70px; /* Space for fixed header */
 }
 
 /* Sections */
 section {
-  width: 45%; /* Adjust to fit into one half with some spacing */
+  width: 45%; /* Width of each section */
   padding: 20px;
-  margin-top: var(--section-spacing);
-  backdrop-filter: opacity(0.85);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s, box-shadow 0.3s;
+  margin-top: var(--section-spacing); /* Vertical spacing */
+  backdrop-filter: opacity(0.9); /* Slight transparency */
+  background-color: rgba(0, 0, 0, 0.7); /* Section background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1); /* Shadow effect */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
 }
 
 section:hover {
-  transform: scale(1.02);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  transform: scale(1.02); /* Slightly enlarge on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7); /* Enhanced shadow on hover */
 }
 
 .section-left {
-  align-self: flex-start; /* Align left sections to the left */
+  align-self: flex-start; /* Align to the left */
 }
 
 .section-right {
-  align-self: flex-end; /* Align right sections to the right */
+  align-self: flex-end; /* Align to the right */
 }
 
 .content {
-  margin-top: 20px;
+  margin-top: 20px; /* Space above content */
 }
 
 ul {
-  list-style-type: disc;
+  list-style-type: disc; /* Bullet points for lists */
 }
 
 /* Scrollbar Customization */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 10px; /* Width of scrollbar */
 }
 
 ::-webkit-scrollbar-track {
-  background: #000;
+  background: #000; /* Track color */
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #555;
-  border-radius: 8px;
+  background: #555; /* Thumb color */
+  border-radius: 8px; /* Rounded corners */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #888;
+  background: #888; /* Thumb color on hover */
 }
 
 /* Modal Styling */
 .modal {
-  display: none;
+  display: none; /* Hidden by default */
   position: fixed;
-  z-index: 2000;
+  z-index: 2000; /* On top of other elements */
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5);
+  overflow: auto; /* Scrollable if needed */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
 }
 
 .modal-content {
-  margin: 5vh auto; /* Adjusted margin to use viewport height */
+  margin: 5vh auto; /* Centered vertically */
   padding: 20px;
-  background: #333;
-  border: 1px solid #fff;
-  border-radius: 10px;
-  width: 80vw; /* Adjusted width to use viewport width */
-  max-width: 900px;
-  height: 80vh; /* Adjusted height to use viewport height */
+  background: #333; /* Modal background */
+  border: 1px solid #fff; /* Border around modal */
+  border-radius: 10px; /* Rounded corners */
+  width: 80vw; /* Width relative to viewport */
+  max-width: 900px; /* Maximum width */
+  height: 80vh; /* Height relative to viewport */
   overflow: hidden; /* Prevent overflow */
 }
 
@@ -181,44 +182,44 @@ ul {
 }
 
 .close {
-  color: #fff;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
+  color: #fff; /* Close button color */
+  float: right; /* Align to the right */
+  font-size: 28px; /* Font size */
+  font-weight: bold; /* Bold text */
+  cursor: pointer; /* Pointer cursor */
 }
 
 .close:hover,
 .close:focus {
-  color: #bbb;
-  text-decoration: none;
+  color: #bbb; /* Color on hover/focus */
+  text-decoration: none; /* Remove underline */
 }
 
 .menu-button {
-  display: none;
-  background-color: transparent;
-  border: none;
-  color: var(--primary-text-color);
-  font-size: 20px;
-  cursor: pointer;
+  display: none; /* Hidden by default */
+  background-color: transparent; /* Transparent background */
+  border: none; /* No border */
+  color: var(--primary-text-color); /* Text color */
+  font-size: 20px; /* Font size */
+  cursor: pointer; /* Pointer cursor */
 }
 
 /* Footer */
 footer {
-  background-color: rgba(0, 0, 0, 0.7);
-  text-align: center;
-  padding: 20px;
-  position: fixed;
+  background-color: rgba(0, 0, 0, 0.7); /* Footer background */
+  text-align: center; /* Center text */
+  padding: 20px; /* Padding around text */
+  position: fixed; /* Fixed at the bottom */
   left: 0;
   bottom: 0;
-  width: 100%;
-  color: var(--primary-text-color);
+  width: 100%; /* Full width */
+  color: var(--primary-text-color); /* Text color */
 }
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
   nav {
-    display: none; /* Hide nav initially on mobile */
+    display: none; /* Hide nav on mobile */
   }
 
   .menu-button {
@@ -226,14 +227,14 @@ footer {
     position: fixed;
     top: 10px;
     right: 10px;
-    z-index: 1001;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 10px;
-    border-radius: 5px;
+    z-index: 1001; /* On top of nav */
+    background-color: transparent !important;
+    padding: 10px; /* Padding */
+    border-radius: 5px; /* Rounded corners */
   }
 
   nav.show {
-    display: block; /* Show nav when button toggles it */
+    display: block; /* Show nav when toggled */
     position: absolute;
     width: 100%;
     left: 0;
@@ -241,63 +242,64 @@ footer {
   }
 
   nav ul {
-    flex-direction: column;
+    flex-direction: column; /* Vertical list */
   }
 
   nav li {
-    margin: 10px 0;
+    margin: 10px 0; /* Spacing */
   }
 
   .modal-content {
-    width: 80vw;
-    height: 80vh;
+    width: 80vw; /* Responsive width */
+    height: 80vh; /* Responsive height */
   }
 
   .container {
-    display: block;
+    display: block; /* Block layout */
   }
 
   section {
-    width: 80%;
-    margin: 20px auto;
-    align-self: center;
+    width: 80%; /* Full width */
+    margin: 20px auto; /* Centered */
+    align-self: center; /* Center alignment */
+    background-color: transparent ;
   }
 
   .gameContainer {
-    width: 100%;
+    width: 100%; /* Full width */
   }
 
   .content {
-    display: none; /* Hide the content by default on mobile */
+    display: none; /* Hidden by default */
   }
 
   .content.visible {
-    display: block; /* Show the content when the section is clicked */
+    display: block; /* Show on click */
   }
 }
 
-/* Adjusting the last section to be above the footer */
+/* Adjust last section to avoid overlap with footer */
 #contact {
-  margin-bottom: 150px; /* Adjust the value as needed to ensure it's above the footer */
+  margin-bottom: 150px; /* Ensure space above footer */
 }
 
 /* Modal Styling for Mobile Content */
 #contentModal .modal-content {
-    width: 80vw;
-    height: 80vh;
-    overflow-y: auto;
+  width: 80vw; /* Responsive width */
+  height: 80vh; /* Responsive height */
+  overflow-y: auto; /* Scrollable content */
 }
 
 #contentModal .close {
-    color: #fff;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
+  color: #fff; /* Close button color */
+  float: right; /* Align right */
+  font-size: 28px; /* Font size */
+  font-weight: bold; /* Bold text */
+  cursor: pointer; /* Pointer cursor */
 }
 
 #contentModal .close:hover,
 #contentModal .close:focus {
-    color: #bbb;
-    text-decoration: none;
+  color: #bbb; /* Hover and focus color */
+  text-decoration: none; /* No underline */
 }

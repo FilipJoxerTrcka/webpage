@@ -108,8 +108,8 @@ document.addEventListener("DOMContentLoaded", () => {
  
         // Draw wheels for the player's car
         ctx.fillStyle = "black";
-        const wheelWidth = 12;
-        const wheelHeight = 20;
+        const wheelWidth = 10;
+        const wheelHeight = 18;
         // Front wheels
         ctx.fillRect(carX, carY, wheelWidth, wheelHeight);
         ctx.fillRect(carX + carWidth - wheelWidth, carY, wheelWidth, wheelHeight);

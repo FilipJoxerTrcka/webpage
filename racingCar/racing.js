@@ -102,8 +102,8 @@
  
         // Draw wheels for the player's car
         ctx.fillStyle = "black";
-        const wheelWidth = 15;
-        const wheelHeight = 30;
+        const wheelWidth = 12;
+        const wheelHeight = 20;
         // Front wheels
         ctx.fillRect(carX, carY, wheelWidth, wheelHeight);
         ctx.fillRect(carX + carWidth - wheelWidth, carY, wheelWidth, wheelHeight);

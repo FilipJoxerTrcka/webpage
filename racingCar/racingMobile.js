@@ -9,8 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
  
     let carX = canvas.width / 2 - 15;
     let carY = canvas.height - 60;
-    let carWidth = 40;
-    let carHeight = 80;
+    let carWidth = 35;
+    let carHeight = 60;
     let velocityX = 0;
     let obstacles = [];
     let bullets = [];

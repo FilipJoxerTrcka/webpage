@@ -9,8 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
  
     let carX = canvas.width / 2 - 15;
     let carY = canvas.height - 60;
-    let carWidth = 45;
-    let carHeight = 60;
+    let carWidth = 40;
+    let carHeight = 65;
     let velocityX = 0;
     let obstacles = [];
     let bullets = [];
@@ -107,8 +107,8 @@ document.addEventListener("DOMContentLoaded", () => {
  
         // Draw wheels for the player's car
         ctx.fillStyle = "black";
-        const wheelWidth = 10;
-        const wheelHeight = 14;
+        const wheelWidth = 15;
+        const wheelHeight = 25;
         // Front wheels
         ctx.fillRect(carX, carY, wheelWidth, wheelHeight);
         ctx.fillRect(carX + carWidth - wheelWidth, carY, wheelWidth, wheelHeight);

@@ -56,7 +56,7 @@
         }
  
         obstacles.forEach((obstacle, index) => {
-            obstacle.y += 3;
+            obstacle.y += 1;
             if (obstacle.y > canvas.height) {
                 obstacles.splice(index, 1);
                 score++;

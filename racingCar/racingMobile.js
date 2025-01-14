@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
         gameIsRunning = true;
         startButton.style.display = "none";
         instructions.style.display = "none";
+        mobileControls.style.display = "block"; 
         gameLoop();
     }
  
@@ -146,6 +147,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function gameOver() {
         gameIsRunning = false;
         startButton.style.display = "block";
+        mobileControls.style.display = "none"; 
     }
  
     leftButton.addEventListener("touchstart", () => {

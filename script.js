@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Get the buttons that open the modal
     var snakeBtn = document.getElementById("playSnakeButton");
     var racingBtn = document.getElementById("playRacingButton");
+    var swordFightBtn = document.getElementById("playSwordFight");
  
     // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
@@ -36,6 +37,13 @@ document.addEventListener("DOMContentLoaded", () => {
     racingBtn.onclick = function() {
         modal.style.display = "block"; // Show modal
         loadGame('racing'); // Load racing game content
+        disableArrowScroll(); // Disable arrow key scrolling
+    }
+ 
+    // When the user clicks the sword fighting game button, open the modal
+    swordFightBtn.onclick = function() {
+        modal.style.display = "block"; // Show modal
+        loadGame('swordFight'); // Load sword fighting game content
         disableArrowScroll(); // Disable arrow key scrolling
     }
  
@@ -69,6 +77,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 gameContainer.innerHTML = '<iframe src="racingCar/racingCar.html" frameborder="0" style="width:100%; height:100%;"></iframe>';
             } else { // Mobile screen
                 gameContainer.innerHTML = '<iframe src="racingCar/racingCarMobile.html" frameborder="0" style="width:100%; height:100%;"></iframe>';
+            }
+        } else if (gameType === 'swordFight') {
+            if (window.innerWidth >= 769) { // PC screen
+                gameContainer.innerHTML = '<iframe src="swordFight/swordFight.html" frameborder="0" style="width:100%; height:100%;"></iframe>';
+            } else { // Mobile screen
+                gameContainer.innerHTML = '<iframe src="swordFight/swordFightMobile.html" frameborder="0" style="width:100%; height:100%;"></iframe>';
             }
         }
     }
